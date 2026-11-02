@@ -1,0 +1,52 @@
+# SAFE DEFAULT: simulation mode. No physical robot commands are sent.
+ECOBOT_MODE=simulation
+ECOBOT_DATABASE=database/ecobot.db
+ECOBOT_DEFAULT_LINK=wireless
+FLASK_HOST=127.0.0.1
+FLASK_PORT=5000
+FLASK_DEBUG=false
+
+# Hardware connection. Set the wired port to the Dobot's COM/TTY device.
+DOBOT_WIRED_PORT=COM3
+DOBOT_BAUDRATE=115200
+
+# Wireless must be a serial-transparent RF bridge or a Wi-Fi-to-virtual-COM
+# gateway. pydobotlab expects a serial port; do not put a bare http:// URL here.
+DOBOT_WIRELESS_PORT=
+
+# Hardware movement remains locked unless BOTH switches below are enabled.
+# Calibrate the arm, tools, bins, and physical cell before enabling either.
+ENABLE_HARDWARE_MOTION=false
+WORKSPACE_CONFIRMED=false
+
+# Example software bounds only. Verify the real robot workspace before use.
+DOBOT_X_MIN=150
+DOBOT_X_MAX=320
+DOBOT_Y_MIN=-120
+DOBOT_Y_MAX=120
+DOBOT_Z_MIN=0
+DOBOT_Z_MAX=150
+DOBOT_R_MIN=-180
+DOBOT_R_MAX=180
+
+# Calibrated sorting poses in millimetres/degrees. Leave blank until measured.
+SORT_PICK_X=
+SORT_PICK_Y=
+SORT_PICK_Z=
+SORT_PICK_R=0
+SORT_APPROACH_MM=35
+
+SORT_PLASTIC_BIN_X=
+SORT_PLASTIC_BIN_Y=
+SORT_PLASTIC_BIN_Z=
+SORT_PLASTIC_BIN_R=0
+
+SORT_PAPER_BIN_X=
+SORT_PAPER_BIN_Y=
+SORT_PAPER_BIN_Z=
+SORT_PAPER_BIN_R=0
+
+SORT_METAL_BIN_X=
+SORT_METAL_BIN_Y=
+SORT_METAL_BIN_Z=
+SORT_METAL_BIN_R=0

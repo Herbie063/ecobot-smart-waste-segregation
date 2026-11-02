@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "name": "ECOBOT frontend demo database",
+    "version": "0.1.0",
+    "environment": "mock-only",
+    "notes": "Seed data for UI exploration. No records in this file are produced by a live sensor or Dobot controller."
+  },
+  "system": {
+    "system_id": "ECOBOT-DEMO-01",
+    "robot_model": "Dobot Magician",
+    "controller_id": "MCU-HUB-DEMO",
+    "site": "Campus Materials Recovery Area",
+    "communication_mode": "wireless",
+    "robot_connection": "connected_demo",
+    "emergency_stop": false,
+    "auto_sort_enabled": true,
+    "camera_status": "online_demo",
+    "inductive_sensor_status": "online_demo",
+    "capacitive_sensor_status": "online_demo",
+    "infrared_sensor_status": "online_demo",
+    "ultrasonic_sensor_status": "online_demo"
+  },
+  "waste_categories": [
+    { "category_id": "CAT-PLASTIC", "name": "Plastic", "bin_label": "Plastic bin", "color": "blue", "icon": "♻" },
+    { "category_id": "CAT-PAPER", "name": "Paper / Non-metal", "bin_label": "Paper bin", "color": "amber", "icon": "▤" },
+    { "category_id": "CAT-METAL", "name": "Metal", "bin_label": "Metal bin", "color": "slate", "icon": "▣" }
+  ],
+  "waste_records": [
+    { "record_id": "EC-2408", "detected_at": "2026-11-02T15:42:18+08:00", "object_label": "PET beverage bottle", "category_id": "CAT-PLASTIC", "confidence_percent": 98.4, "destination_bin": "Plastic bin", "sort_status": "success", "cycle_duration_seconds": 4.2, "communication_mode": "wireless" },
+    { "record_id": "EC-2407", "detected_at": "2026-11-02T15:39:51+08:00", "object_label": "Printed worksheet", "category_id": "CAT-PAPER", "confidence_percent": 95.1, "destination_bin": "Paper bin", "sort_status": "success", "cycle_duration_seconds": 4.8, "communication_mode": "wired" },
+    { "record_id": "EC-2406", "detected_at": "2026-11-02T15:36:23+08:00", "object_label": "Aluminum can", "category_id": "CAT-METAL", "confidence_percent": 97.7, "destination_bin": "Metal bin", "sort_status": "success", "cycle_duration_seconds": 4.4, "communication_mode": "wireless" },
+    { "record_id": "EC-2402", "detected_at": "2026-11-02T15:08:19+08:00", "object_label": "Plastic cup", "category_id": "CAT-PLASTIC", "confidence_percent": 87.8, "destination_bin": "Plastic bin", "sort_status": "flagged", "cycle_duration_seconds": 6.3, "communication_mode": "wireless" }
+  ],
+  "telemetry": [
+    { "metric_id": "TEL-001", "captured_at": "2026-11-02T15:42:18+08:00", "robot_x_mm": 248.0, "robot_y_mm": 12.0, "robot_z_mm": 42.0, "robot_r_deg": 0.0, "communication_latency_ms": 42, "robot_speed_percent": 45 },
+    { "metric_id": "TEL-002", "captured_at": "2026-11-02T15:39:51+08:00", "robot_x_mm": 245.0, "robot_y_mm": 9.0, "robot_z_mm": 40.0, "robot_r_deg": 0.0, "communication_latency_ms": 14, "robot_speed_percent": 45 }
+  ],
+  "safety_events": [
+    { "event_id": "SAFE-001", "event_at": "2026-11-02T14:10:00+08:00", "event_type": "home_position", "description": "Demo home-position routine completed", "severity": "info" }
+  ]
+}

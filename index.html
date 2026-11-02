@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d2421" />
+  <title>ECOBOT | Smart Campus Waste Segregation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark"><span class="brand-leaf">✳</span></div>
+        <div><div class="brand-name">ECOBOT<span class="brand-period">.</span></div><div class="brand-subtitle">SMART SORTING SYSTEM</div></div>
+      </div>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="#overview" class="nav-link active" data-route="overview"><span class="nav-icon">◫</span><span>Overview</span></a>
+        <a href="#live-sorting" class="nav-link" data-route="live-sorting"><span class="nav-icon">◎</span><span>Live sorting</span><span class="nav-live-dot"></span></a>
+        <a href="#dobot-remote" class="nav-link" data-route="dobot-remote"><span class="nav-icon">⌘</span><span>Dobot remote</span></a>
+        <a href="#records" class="nav-link" data-route="records"><span class="nav-icon">▤</span><span>Waste records</span></a>
+        <a href="#analytics" class="nav-link" data-route="analytics"><span class="nav-icon">▥</span><span>Analytics</span></a>
+      </nav>
+
+      <div class="workspace-label system-nav-label">SYSTEM</div>
+      <nav class="side-nav">
+        <a href="#system" class="nav-link" data-route="system"><span class="nav-icon">⚙</span><span>System & safety</span></a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-system-card">
+        <div class="system-card-top"><span class="pulse-dot"></span><span>PROTOTYPE ENVIRONMENT</span></div>
+        <div class="system-card-main">All demo services online</div>
+        <div class="system-card-foot"><span>UI simulation</span><span class="mini-chip">v0.1.0</span></div>
+      </div>
+      <div class="sidebar-user">
+        <div class="avatar">EC</div>
+        <div class="user-copy"><strong>Campus Operator</strong><span>Demo workspace</span></div>
+        <span class="user-more">···</span>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="pageCrumb">Overview</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <div class="mode-indicator"><span class="mode-indicator-dot" id="topModeDot"></span><span id="topModeLabel">WIRELESS MODE</span></div>
+          <div class="connection-indicator"><span class="pulse-dot" id="topConnectionDot"></span><span id="topConnectionLabel">Robot connected</span></div>
+          <button class="estop-top" id="topEStop"><span class="estop-symbol">■</span> EMERGENCY STOP</button>
+          <div class="top-avatar">EC</div>
+        </div>
+      </header>
+
+      <div class="page-container">
+        <div id="pageContent"></div>
+        <footer class="app-footer"><span>© 2026 ECOBOT Prototype Interface</span><span>Frontend demonstration · No live hardware connected</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-icon warning">!</div>
+      <h2 id="modalTitle">Activate emergency stop?</h2>
+      <p>This will simulate an immediate stop command and lock the remote movement controls in this prototype.</p>
+      <div class="modal-actions"><button class="btn btn-quiet" id="cancelEStop">Cancel</button><button class="btn btn-danger" id="confirmEStop">Activate E-stop</button></div>
+    </section>
+  </div>
+  <script src="data/mock-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
